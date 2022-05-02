@@ -2,7 +2,14 @@ from tkinter import *
 from weather import *
 
 class gui:
+    """
+    class to make a user interface and method to make gui functionable
+    """
     def __init__(self,window):
+        """
+        Constructor to create frames, buttons, etc.
+        :param window: parameter from main class
+        """
         self.window = window
 
         self.frame_top = Frame(self.window)
@@ -23,6 +30,9 @@ class gui:
         self.frame_bottom.pack()
 
     def button_clicked(self):
+        """
+        Method to run when the button_weather is clicked and pass the city name to weather class
+        """
         city_name = self.text_city.get(1.0, "end")
         city = weather(city_name)
         self.label_weather.config(text = city)

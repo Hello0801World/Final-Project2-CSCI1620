@@ -1,6 +1,9 @@
 from gui import *
 
 def main():
+    """
+    main class to have basic state of gui such as size, title, etc.
+    """
     window = Tk()
     window.geometry('300x300')
     window.title('Weather Teller')
