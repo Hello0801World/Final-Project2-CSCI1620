@@ -3,12 +3,21 @@ import requests
 
 class weather:
     def __init__(self,city):
+        """
+        Constructor to get weather api and to make url
+        :param city: city name that is taken from text box
+        """
         self.city = city
         self.BASE_URL = "http://api.openweathermap.org/data/2.5/weather?"
         self.API_KEY = 'bb8b1d3002cc41ddddb6dc0a79b906ea'
         self.url = self.BASE_URL + 'appid=' + self.API_KEY + '&q=' + self.city
 
     def __str__(self):
+        """
+        Method to return string for user
+        :return: weather information of city asked by user
+        :return: otherwise return error message
+        """
         response = requests.get(self.url).json()
 
         try:
