@@ -1,6 +1,7 @@
 from tkinter import *
 from weather import *
 
+
 class gui:
     """
     class to make a user interface and method to make gui functionable
@@ -34,5 +35,4 @@ class gui:
         Method to run when the button_weather is clicked and pass the city name to weather class
         """
         city_name = self.text_city.get(1.0, "end")
-        city = weather(city_name)
-        self.label_weather.config(text = city)
+        self.label_weather.config(text=weather(city_name),font=("Arial", 20))
