@@ -1,3 +1,7 @@
+# Original idea: https://www.youtube.com/watch?v=9P5MY_2i7K8
+# Added GUI
+
+
 from gui import *
 
 def main():
